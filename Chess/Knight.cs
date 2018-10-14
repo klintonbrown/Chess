@@ -12,16 +12,23 @@ namespace Chess
 
         public Knight(bool pieceColor) : base(pieceColor)
         {
-            moveset = new int[,]
+            variableDistance = false;
+            if (color)
             {
-                {1,2},
-                {1,-2},
-                {2,1},
-                {2,-1},
-                {-1,2},
-                {-1,-2},
-                {-2,1},
-                {-2,-1}
+                pieceImage = Chess.Properties.Resources.whiteknight;
+            }
+            else pieceImage = Chess.Properties.Resources.blackknight;
+
+            moveset = new List<int[]>(8)
+            {
+                new int[] { 1, 2 },
+                new int[] { 1, -2 },
+                new int[] { 2, 1 },
+                new int[] { 2, -1 },
+                new int[] { -1, 2 },
+                new int[] { -1, -2 },
+                new int[] { -2, 1 },
+                new int[] { -2, -1 }
             };
         }
 

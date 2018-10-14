@@ -48,13 +48,15 @@
   <ItemGroup>
     <Compile Include="Bishop.cs" />
     <Compile Include="Board.cs" />
+    <Compile Include="ChessMatch.cs" />
     <Compile Include="ChessPiece.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="ChessGUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ChessGUI.Designer.cs">
+      <DependentUpon>ChessGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChessPlayer.cs" />
     <Compile Include="King.cs" />
     <Compile Include="Knight.cs" />
     <Compile Include="Pawn.cs" />
@@ -62,8 +64,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Queen.cs" />
     <Compile Include="Rook.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="ChessGUI.resx">
+      <DependentUpon>ChessGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -73,6 +75,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -86,6 +89,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\board.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\blackbishop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\blackking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\blackknight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\blackpawn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\blackqueen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\blackrook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\whitebishop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\whiteking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\whiteknight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\whitepawn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\whitequeen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\whiterook.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

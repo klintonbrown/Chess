@@ -12,16 +12,23 @@ namespace Chess
 
         public King(bool pieceColor) : base(pieceColor)
         {
-            moveset = new int[,]
+            variableDistance = false;
+            if (color)
             {
-                {0,1},
-                {0,-1},
-                {1,0},
-                {-1,0},
-                {1,1},
-                {1,-1},
-                {-1,1},
-                {-1,-1}
+                pieceImage = Chess.Properties.Resources.whiteking;
+            }
+            else pieceImage = Chess.Properties.Resources.blackking;
+
+            moveset = new List<int[]>(8)
+            {
+                new int[] { 0, 1 },
+                new int[] { 0, -1 },
+                new int[] { 1, 0 },
+                new int[] { -1, 0 },
+                new int[] { 1, 1 },
+                new int[] { 1, -1 },
+                new int[] { -1, 1 },
+                new int[] { -1, -1 }
             };
         }
 
